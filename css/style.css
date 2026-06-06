@@ -1,0 +1,975 @@
+:root{
+  --section-spacing: 80px;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+address {
+  font-style: normal;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ── Page wrapper ── */
+.page-wrapper {
+  width: 100%;
+  background: #fff;
+}
+
+/* 
+   HEADER
+ */
+.site-header{
+  position:relative;
+  z-index:999;
+}
+
+/* 
+   MAIN HEADER
+ */
+
+.header-main{
+  position:relative;
+  z-index:100;
+
+  background:#fff;
+
+  transition:transform .3s ease,
+             opacity .3s ease;
+}
+
+.header-main.hide{
+  transform:translateY(-100%);
+  opacity:0;
+}
+.header-main-inner{
+  max-width:1920px;
+  margin:auto;
+
+  height:120px;
+
+  padding:0 80px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+.header-logo-wrap{
+  position:relative;
+}
+
+.header-logo{
+  width:auto;
+  height:160px;
+
+  display:block;
+
+  position:relative;
+  z-index:2;
+}
+
+.btn-register-main{
+  margin-top:28px;
+
+  display:flex;
+
+  border:none;
+  background:none;
+
+  cursor:pointer;
+}
+
+.btn-register-icon-wrap{
+  width:60px;
+  height:60px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:linear-gradient(
+    90deg,
+    #000e38,
+    #3f186a
+  );
+}
+
+.btn-register-text{
+  height:60px;
+
+  padding:0 30px;
+
+  display:flex;
+  align-items:center;
+
+  border:2px solid #101145;
+  border-left:none;
+
+  font-size:14px;
+  font-weight:700;
+
+  color:#101145;
+}
+
+/* 
+   STICKY HEADER
+ */
+
+.header-sticky{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+
+  z-index:90;
+
+  background:linear-gradient(
+    90deg,
+    rgba(0,14,56,.95),
+    rgba(63,24,106,.95)
+  );
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  height:84px;
+  border-bottom: 1px solid #4818b3;
+}
+
+.header-sticky.show{
+  top:0;
+}
+
+.header-sticky-inner{
+
+  max-width:1920px;
+  margin:auto;
+
+  height:84px;
+
+  padding:0 80px 0px 92px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.sticky-logo{
+  height:88px;
+  width:auto;
+}
+
+.sticky-btn{
+
+  height:54px;
+
+  padding:0 32px;
+
+  border:none;
+  border-radius:8px;
+
+  background:#fff;
+
+  font-size:16px;
+  font-weight:700;
+
+  color:#15489f;
+
+  cursor:pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-arrow{
+  font-size:24px
+}
+/* section gaps */
+
+.schools-section,
+.categories-section,
+.highlights-section,
+.trust-section,
+.appointment-section{
+  padding-top: var(--section-spacing);
+}
+
+/* 
+   HERO
+ */
+.hero-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(88deg, #000e38 0%, #3f186a 100%);
+}
+.hero-glow {
+  position: absolute;
+  right: 8%;
+  top: 64px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: #592591;
+  filter: blur(102px);
+  pointer-events: none;
+}
+.hero-inner {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  min-height: 720px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 24px;
+}
+
+
+/* hero left */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  max-width: 520px;
+}
+.hero-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hero-heading {
+  font-family: 'FONTSPRING DEMO - Museo Sans 700-Regular', 'Open Sans', sans-serif;
+  font-size: clamp(36px, 5vw, 48px);
+  font-weight: 400;
+  line-height: 1.2;
+  background: linear-gradient(180deg, #ffcc81 0%, #e9c79f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.top-school-heading{
+  font-size: clamp(42px, 6vw, 60px);
+  font-weight: 500;
+}
+.hero-subheading {
+  font-family: 'FONTSPRING DEMO - Museo Sans 500-Regular', 'Open Sans', sans-serif;
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 400;
+  line-height: 1.3;
+  background: linear-gradient(180deg, #ffcc81 0%, #e9c79f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* hero info card */
+.hero-info-card {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 213px;
+  background: linear-gradient(180deg, #ffcc81 0%, #e9c79f 100%);
+  padding: 5px;
+}
+.hero-info-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 109px;
+  align-items: center;
+  border-radius: 213px;
+  border: 1.33px solid rgba(0,0,0,.13);
+  padding: 20px 24px;
+}
+
+.hero-info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-info-item--left {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding-bottom: 16px;
+}
+
+.hero-info-item--right {
+  padding-top: 16px;
+}
+.hero-info-title {
+  font-size: clamp(20px, 2.5vw, 27px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #000;
+}
+.hero-info-sub {
+  font-size: clamp(14px, 1.8vw, 19px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: #000;
+}
+
+/* hero collage */
+
+
+.hero-collage {
+  display: none;
+}
+
+/* hero form */
+.hero-form-wrap {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.enquire-card {
+  width: 100%;
+  max-width: 414px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(0,0,0,.2) 0%, rgba(6,21,50,.2) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 24px;
+}
+.enquire-title {
+  font-family: 'Archivo', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.enquire-form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.enquire-input,
+.enquire-textarea {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,.1);
+  padding: 0 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  outline: none;
+  transition: box-shadow .15s;
+}
+.enquire-input::placeholder,
+.enquire-textarea::placeholder { color: rgba(255,255,255,.7); }
+.enquire-input:focus,
+.enquire-textarea:focus { box-shadow: 0 0 0 1px rgba(255,255,255,.4); }
+.enquire-input { height: 50px; }
+.enquire-textarea {
+  min-height: 100px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  resize: none;
+}
+.enquire-submit-wrap { padding-top: 11px; }
+.enquire-submit-btn {
+  display: inline-flex;
+  height: 60px;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.enquire-submit-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 4px 0 0 4px;
+  flex-shrink: 0;
+}
+.enquire-submit-icon-wrap img {
+  width: 17px;
+  height: 17px;
+}
+.enquire-submit-text {
+  height: 60px;
+  width: 150px;
+  border: 2px solid #fff;
+  border-left: none;
+  background: transparent;
+  border-radius: 0 4px 4px 0;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+
+  transition: all .4s ease;
+}
+
+.enquire-submit-text.active {
+  background: #fff !important;
+  color: #000e38 !important;
+}
+.enquire-submit-text:hover { background: rgba(255,255,255,.1); }
+
+.form-message{
+  margin-top:12px;
+  font-size:14px;
+  font-weight:600;
+  color:#7CFF9B;
+  min-height:20px;
+}
+@keyframes pulseCard {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+.enquire-card.highlight {
+  animation: pulseCard 1s ease;
+  box-shadow:
+    0 0 40px rgba(255,204,129,.8);
+}
+
+/* 
+   PARTICIPATING SCHOOLS
+ */
+.schools-section {
+  width: 100%;
+  background: #fff;
+  padding: 40px 0;
+}
+
+
+.schools-inner {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 42px;
+  padding: 0 16px;
+}
+
+.schools-title {
+  font-family: 'Archivo', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  background: linear-gradient(0deg, #000e38 0%, #3f186a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.schools-grid-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.schools-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+
+.school-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 120px;
+}
+.school-cell img {
+  object-fit: contain;
+  max-height: 100%;
+}
+
+/* 
+   TRUST HIGHLIGHTS
+ */
+.trust-section {
+  width: 100%;
+}
+.trust-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 18px 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 16px;
+}
+
+
+.trust-card {
+  width: 100%;
+  max-width: 311px;
+}
+.trust-item {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 309px;
+  height: 165px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.trust-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.trust-text {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+   background: linear-gradient(
+    80deg,
+    #010E39,
+    #0344A2
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 0 40px;
+}
+.trust-text strong { font-weight: 700; }
+
+/* 
+   SCHOOL CATEGORIES
+ */
+.categories-section {
+  position: relative;
+  width: 100%;
+  padding: 24px 0;
+}
+.categories-inner {
+  max-width: 1917px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.categories-title {
+  font-family: 'FONTSPRING DEMO - Museo Sans 700-Regular', 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.3;
+  text-align: center;
+  background: linear-gradient(0deg, #000e38 0%, #3f186a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.categories-scroll-wrap {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.categories-scroll-wrap::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+.categories-list {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  min-width: max-content;
+}
+
+
+.category-card {
+  position: relative;
+  height: 405px;
+  width: 300px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+.category-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.75) 0%, rgba(0,0,0,.25) 50%, transparent 100%);
+}
+.category-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 24px 25px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.category-card-title {
+  font-family: 'FONTSPRING DEMO - Museo Sans 700-Regular', 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #fff;
+}
+.category-desc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.5;
+  color: #fff;
+  max-width: 375px;
+}
+
+/* 
+   APPOINTMENT CALLOUT
+ */
+.appointment-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.appointment-grid {
+  position: relative;
+  min-height: 725px;
+}
+
+.appointment-left {
+  position: absolute;
+  z-index: 2;
+  width: 50%;
+  padding:48px;
+  top:50%;
+  transform:translateY(-50%);
+}
+.appointment-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.appointment-header-note{
+   font-family:'FONTSPRING DEMO - Museo Sans 500-Regular', 'Open Sans', sans-serif;
+   font-size: clamp(28px, 4vw, 42px);
+   background: linear-gradient(270deg, #000E38 0%, #3F186A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.appointment-italic {
+  font-family: 'FONTSPRING DEMO - Museo Sans 500-Italic', 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.5;
+  background: linear-gradient(270deg, #755797 0%, #9b4df0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.btn-preschedule {
+  display: inline-flex;
+  align-items: stretch;
+  border: none;
+  background: transparent;
+  padding: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.btn-preschedule-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(0deg, #000e38 0%, #3f186a 100%);
+  border-radius: 4px 0 0 4px;
+  flex-shrink: 0;
+}
+.btn-preschedule-icon-wrap img {
+  width: 17px;
+  height: 17px;
+}
+.btn-preschedule-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0 20px;
+  border: 2px solid #101145;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #101145;
+}
+.appointment-right {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.appointment-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 
+   EXHIBITION HIGHLIGHTS
+ */
+.highlights-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: url('/assets/images/cuve-bg.png') center / 100% 100% no-repeat;
+  padding:80px;
+  margin-bottom: 80px;
+}
+.highlights-inner {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+
+.highlights-header {
+  display: flex;
+  justify-content: center;
+}
+.highlights-title {
+  max-width: 889px;
+  text-align: center;
+  font-family: 'FONTSPRING DEMO - Museo Sans 700-Regular', 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.3;
+  color: #fff;
+}
+.highlights-scroll-wrap {
+  width: 100%;
+   overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.highlights-scroll-wrap ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+.highlights-list {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 8px;
+  width: max-content;
+  min-width: 100%;
+}
+.highlight-card {
+  position: relative;
+  height: 380px;
+  width: 300px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(53deg, rgba(221,191,255,1) 0%, rgba(237,221,255,1) 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+  box-shadow: inset 0 0 0 1.5px rgba(117,87,151,.5);
+}
+
+
+.highlight-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+.highlight-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.highlight-card-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.375;
+  background: linear-gradient(0deg, #000e38 0%, #3f186a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.highlight-card-desc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  background: linear-gradient(0deg, #000e38 0%, #3f186a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.highlights-nav {
+  display: flex;
+  justify-content: center;
+}
+.highlights-nav > div,
+.highlights-nav {
+  display: flex;
+  align-items: center;
+  gap: 31.5px;
+}
+.highlights-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+.highlights-nav-btn img {
+  width: 60px;
+  height: 60px;
+}
+
+/* 
+   FOOTER
+ */
+.footer-main {
+  background: linear-gradient(0deg, #000e38 0%, #3f186a 100%);
+}
+.footer-inner {
+  max-width: 1718px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 48px 24px;
+}
+
+
+.footer-logo-wrap { flex-shrink: 0; }
+.footer-logo {
+  height: 124px;
+  width: 142px;
+  object-fit: cover;
+}
+.footer-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+
+.footer-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.footer-social {
+  flex-direction: column;
+  gap: 10px;
+}
+.social-media-icons{
+    display:flex;
+    gap:12px;
+}
+.footer-info-icon {
+  margin-top: 2px;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.footer-address { font-style: normal; }
+.footer-info-title {
+  font-family: 'FONTSPRING DEMO - Museo Sans 700-Regular', 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #fff;
+  white-space: nowrap;
+}
+.footer-info-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+}
+.footer-copyright {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  padding: 18px 16px;
+  text-align: center;
+}
+.footer-copyright p {
+  font-family: 'FONTSPRING DEMO - Museo Sans 500-Regular', 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+}
+

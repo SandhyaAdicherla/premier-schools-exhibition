@@ -1,0 +1,189 @@
+@media(max-width:768px){
+  :root{
+    --section-spacing: 40px;
+  }
+  .header-main{
+    height:80px;
+  }
+
+  .header-main-inner{
+    padding:0 20px;
+    height:80px;
+  }
+
+  .header-logo{
+    height:90px;
+  }
+
+  .header-logo-wrap::after{
+    display:none;
+  }
+
+  .btn-register-main{
+    display:none;
+  }
+
+  .header-sticky-inner{
+    padding:0 20px;
+  }
+
+  .sticky-logo{
+    height:42px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 520px) minmax(0, 1fr) 414px;
+    padding: 0 100px;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-info-inner {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 32px;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-info-item--left {
+    border-bottom: none;
+    border-right: 1px solid rgba(0,0,0,.1);
+    padding-bottom: 0;
+    padding-right: 24px;
+  }
+  .hero-info-item--right {
+    padding-left: 24px;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+   :root{
+    --section-spacing: 60px;
+  }
+  .hero-collage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 720px;
+    overflow: hidden;
+  }
+
+  .hero-collage-inner {
+    display: flex;
+    gap: 24px;
+    height: 720px;
+    overflow: hidden;
+  }
+
+  .hero-column{
+  width:200px;
+  height:720px;
+  overflow:hidden;
+  position:relative;
+}
+
+.hero-track{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+
+  will-change:transform;
+}
+
+.hero-collage-img{
+  width:200px;
+  height:440px;
+  object-fit:cover;
+  border-radius:999px;
+  display:block;
+}
+  
+}
+
+@media (min-width: 1024px) {
+  .hero-form-wrap { justify-content: flex-end; }
+}
+
+@media (min-width: 640px) { .schools-section { padding: 48px 0; } }
+
+@media (min-width: 1024px) { .schools-section { padding: 60px 0; } }
+
+@media (min-width: 640px) { .schools-inner { padding: 0 24px; } }
+
+@media (min-width: 640px) { .schools-row { grid-template-columns: repeat(3, 1fr); } }
+
+@media (min-width: 1024px) { .schools-row { grid-template-columns: repeat(7, 1fr); } }
+
+@media (min-width: 640px) { .trust-inner { grid-template-columns: repeat(2, 1fr); } }
+
+@media (min-width: 1024px) { .trust-inner { grid-template-columns: repeat(4, 1fr); gap: 18px; } }
+
+@media (min-width: 640px) { .categories-list { gap: 16px; padding: 12px 32px; } }
+
+@media (min-width: 1024px) { .categories-list { padding: 12px 34px; } }
+
+@media (min-width: 640px) { .category-card { width: 360px; } }
+
+@media (min-width: 1024px) { .category-card { width: 420px; } }
+
+@media (max-width: 767px) {
+
+  .appointment-grid {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .appointment-right {
+    position: static;
+    order: 2;
+  }
+
+  .appointment-left {
+    width: 100%;
+    top:20px;
+    left:20px;
+    transform:none;
+  }
+
+  .appointment-photo {
+    height: auto;
+    display: block;
+  }
+}
+
+@media (min-width: 640px) { .highlight-card { width: 340px; } }
+
+@media (min-width: 1024px) { .highlight-card { width: 417px; } }
+
+@media (min-width: 640px) { .footer-inner { padding: 48px 40px; } }
+
+@media (min-width: 1024px) {
+  .footer-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 48px 101px;
+  }
+}
+
+@media (min-width: 640px) { .footer-info-grid { grid-template-columns: repeat(2, 1fr); } }
+
+@media (min-width: 1280px) {
+  .footer-info-grid {
+    grid-template-columns: minmax(0,418px) minmax(0,417px) minmax(0,279px) minmax(0,187px);
+    align-items: start;
+    justify-content: end;
+    gap: 16px;
+  }
+}
