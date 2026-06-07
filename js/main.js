@@ -77,3 +77,30 @@ document
     });
 
   });
+
+  const list = document.getElementById("highlightsList");
+const cards = [...list.querySelectorAll(".highlight-card")];
+
+let currentIndex = 0;
+
+document.getElementById("hlNext").addEventListener("click", () => {
+  if (currentIndex < cards.length - 1) {
+    currentIndex++;
+    cards[currentIndex].scrollIntoView({
+      behavior: "smooth",
+      inline: "start",
+      block: "nearest"
+    });
+  }
+});
+
+document.getElementById("hlPrev").addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    cards[currentIndex].scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest"
+    });
+  }
+});

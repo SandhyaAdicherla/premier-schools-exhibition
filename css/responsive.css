@@ -1,9 +1,9 @@
 @media(max-width:768px){
   :root{
-    --section-spacing: 40px;
+    --section-spacing: 25px;
   }
   .header-main{
-    height:80px;
+    height:84px;
   }
 
   .header-main-inner{
@@ -30,6 +30,57 @@
   .sticky-logo{
     height:42px;
   }
+  .sticky-btn{
+    height:42px;
+    padding:0px 14px;
+  }
+   .trust-item{
+    width:175px;
+    height: 94px;
+  }
+  .enquire-submit-btn{
+    height:42px;
+  }
+  .enquire-submit-text{
+    height:42px;
+    width:120px;
+  }
+ .school-cell{
+   width:255px;
+   height:112px;
+ }
+ .category-card{
+    width:290px;
+    height:280px;
+ }
+ .highlights-section{
+  padding:20px;
+  margin-bottom: 24px;
+ }
+ .highlight-card{
+    width:187px;
+    height:240px;
+    padding:15px;
+ }
+ .highlight-icon{
+  width:42px;
+  height:42px;
+ }
+ .highlight-card-title,.highlight-card-desc{
+   font-size:12px;
+ }
+ .highlights-nav-btn{
+    width:30px;
+    height:30px;
+ } 
+ .footer-logo{
+  width:105px;
+  height:90px;
+}
+.footer-info-icon{
+  width: 42px;
+  height:42px;
+}
 
 }
 
@@ -52,10 +103,10 @@
     border-bottom: none;
     border-right: 1px solid rgba(0,0,0,.1);
     padding-bottom: 0;
-    padding-right: 24px;
+    padding-right: 12px;
   }
   .hero-info-item--right {
-    padding-left: 24px;
+    padding-left: 12px;
     padding-top: 0;
   }
 }
@@ -106,7 +157,6 @@
   border-radius:999px;
   display:block;
 }
-  
 }
 
 @media (min-width: 1024px) {
@@ -119,11 +169,12 @@
 
 @media (min-width: 640px) { .schools-inner { padding: 0 24px; } }
 
-@media (min-width: 640px) { .schools-row { grid-template-columns: repeat(3, 1fr); } }
 
-@media (min-width: 1024px) { .schools-row { grid-template-columns: repeat(7, 1fr); } }
-
-@media (min-width: 640px) { .trust-inner { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 640px) { 
+  .trust-inner { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+ }
 
 @media (min-width: 1024px) { .trust-inner { grid-template-columns: repeat(4, 1fr); gap: 18px; } }
 
@@ -151,7 +202,7 @@
   .appointment-left {
     width: 100%;
     top:20px;
-    left:20px;
+    padding:8px 20px;
     transform:none;
   }
 
