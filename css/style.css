@@ -336,9 +336,50 @@ button {
 
 
 .hero-collage {
-  display: none;
+  display: block;
+}
+.hero-collage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 720px;
+    overflow: hidden;
+  }
+
+  .hero-collage-inner {
+    display: flex;
+    gap: 24px;
+    height: 720px;
+    overflow: hidden;
+  }
+
+  .hero-column{
+  width:200px;
+  height:720px;
+  overflow:hidden;
+  position:relative;
 }
 
+.hero-track{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+
+  will-change:transform;
+}
+
+.hero-collage-img{
+  width:200px;
+  height:440px;
+  object-fit:cover;
+  border-radius:999px;
+  display:block;
+}
 /* hero form */
 .hero-form-wrap {
   display: flex;
